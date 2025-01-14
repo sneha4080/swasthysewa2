@@ -1,0 +1,168 @@
+/* Container for the scrolling text */
+.moving-text-container {
+  position: relative;
+  overflow: hidden; /* Hides text outside the container */
+  width: 100%; /* Full width of the page */
+  height: 60px; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+}
+
+/* Scrolling text wrapper */
+.moving-text {
+  display: flex; 
+  gap: 30px; 
+  animation: scroll 10s linear infinite; 
+  font-size: 50px;
+  font-weight: 600;
+  color:#cde6d2; 
+  white-space: nowrap;
+}
+
+
+/* Animation keyframes */
+@keyframes scroll {
+  0% {
+    transform: translateX(0); /* Start at normal position */
+  }
+  100% {
+    transform: translateX(-50%); /* Move half the width to create a loop */
+  }
+}
+
+.about-page {
+  padding: 20px;
+}
+
+
+
+.info-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.content {
+  flex: 1;
+  max-width: 50%;
+}
+
+.pro-info {
+  margin-top:70px ;
+  margin-left: 90px;
+  text-align: left;
+  color: black;
+  font-family: serif;
+  font-weight: 600;
+  font-size: 80px;
+} 
+
+ .pro-name {
+  margin-left:75px ;
+  margin-top: -35px;
+  padding: 1rem;
+  color: orangered;
+  font-family: serif;
+  font-weight: 600;
+  font-size: 80px;
+  text-align: left;
+} 
+
+.content-info {
+  margin-top: -37px;
+  text-align: left;
+  padding: 30px 30px 20px 93px;
+  font-family: 'arial';
+  font-weight: 500;
+  color: black;
+  font-size: 18px;
+}
+
+.img-content {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.card h5{
+  /* margin-top: -20px; */
+  /* padding-left: 36px; */
+  color: #FF4b12;
+  font-size: 18px;
+  font-weight: 600;
+  font-family:'Segoe UI' ;
+}
+
+
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 30%;
+}
+.card:hover {
+  z-index: 20;
+  transform: scale(1.05); /* Slightly enlarge the card */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add a more prominent shadow */
+}
+
+.card .icon {
+  margin-bottom: 15px;
+}
+
+
+.card p {
+    margin-top: 20px ;
+    text-align: left;
+    padding-left: 35px;
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+}
+
+/* btn clcik more */
+
+
+.about-btn{
+  height: 50px;
+  width: 320px;
+  border-radius: 50px;
+  text-align: center;
+  padding: 0.95rem;
+  margin: auto;
+  background-color: #FF693A;
+}
+
+.about-btn a{
+      font-size: 24px;
+      color: white;
+      font-family: sans-serif;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 18px;
+}
+.about-btn:hover{
+  border: 10px solid rgb(247, 221, 173);
+  height: 70px;
+
+}
