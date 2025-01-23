@@ -91,7 +91,8 @@
 .img-content img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 15px;
+  /* margin: 8rem; */
 }
 .card h5{
   /* margin-top: -20px; */
@@ -150,6 +151,7 @@
   text-align: center;
   padding: 0.95rem;
   margin: auto;
+  margin-top: 40px;
   background-color: #FF693A;
 }
 
@@ -166,3 +168,109 @@
   height: 70px;
 
 }
+
+.img-sec{
+   /* margin: 5rem; */
+   max-width: 100%;
+   height: 90px;
+   border-radius: 15px;
+   margin: 8rem;
+}
+
+.foot-info{
+  /* margin: 5rem; */
+  height: 100vh;
+  /* width: 100vw; */
+  margin-top: 8rem;
+  /* background-color: #F5F5F5; */
+}
+.foot-info h2{
+  font-family: 'Segoe UI';
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 35px;
+  color: #BD0E20;
+  margin-left: 880px;
+  margin-top: -200px;
+  background-color: #F9F5F2;
+}
+
+.foot-info p{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: sans-serif;
+    line-height: 27px;
+    margin-left: 880px;
+  
+}
+
+.medical-img{
+  margin-left: 120px;
+  margin-top: -300px;
+
+
+}
+.medical-img img{
+  height: 400px;
+  width:  560px;
+
+}
+
+.medical-info{
+  margin-left: 790px;
+  margin-top: -390px;
+  height: 500px;
+  /* width: 50vw; */
+
+
+}
+.medical-info h2{
+  
+  padding: 10px;
+  font-family: 'Segoe UI';
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 35px;
+  color: #BD0E20;
+}
+.medical-info p{
+  font-size: 16px;
+  font-weight: 500;
+  font-family: sans-serif;
+  line-height: 27px;
+ margin-left: 10px;
+}
+
+/* .btn-medi{
+
+      display: flex;
+      align-items: center;
+      /* padding: 10px 20px; */
+      /* font-size: 16px;
+      color: white;
+      background-color: black;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      height: 50px;
+      width: 250px;
+      margin-left: 990px;
+      margin-top: 400px;
+     color: white; */
+    
+  /* }
+  
+  a{
+      text-decoration: none;
+  }
+  .medical-img-btn:hover {
+      background-color: #333;
+  }
+ 
+
+  .play-icon {
+      margin-right: 50px;
+      font-size: 12px;
+      margin-top: -300px;
+  } */ 

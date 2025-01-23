@@ -1,27 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./navbar.css";
 
 
 const Navbar = () => {
-  const [isLoggedIn] = useState(false); // State to track login status
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // State to track login status
   const navigate = useNavigate();
+  const [searchTerm, setsearchTerm] = useState("")
 
+  useEffect(() => {
+    const token = localStorage.getItem("authToken");
+    setIsLoggedIn(!!token); // Set state based on token presence
+  }, []);
 
-  // Function to handle Login/SignUp button click
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    navigate(`/search/${searchTerm}`)
+    setsearchTerm("")
+
+  }
+  
   const handleLoginClick = () => {
     if (!isLoggedIn) {
       navigate("/signup"); // Redirect to signup if not logged in
     } else {
-      navigate("/login"); // Redirect to login if logged in
+      navigate("/logout")
     }
+  };
+
+  // Function to handle Login/SignUp button click
+  const handleLogoutClick = () => {
+    localStorage.removeItem("authToken"); // Remove token from localStorage
+    setIsLoggedIn(false); // Update state
+    navigate("/signup"); // Redirect to signup after logout
   };
 
   return (
     <nav className="navbar navbar-expand-lg ">
       <div className="container">
-        <Link className="navbar-brand" to="/home">
+        <Link className="navbar-brand" to="/">
           <img
             src="/logo.png" // Path relative to the `public` folder
             alt="SwasthySewa Logo"
@@ -64,25 +82,43 @@ const Navbar = () => {
           </ul>
 
           {/* Search Bar */}
-          <div className="d-flex justify-content-center w-80">
-            <form className="d-flex">
+          <div className="d-flex w-90 search-bar me-auto">
+            <form 
+             onSubmit={handleSubmit}
+            className="d-flex">
               <input
-                className="form-control me-2"
+                className="form-control me-1"
+                value={searchTerm}
+                onChange={(e)=>setsearchTerm(e.target.value)}
                 type="search"
-                placeholder="Search"
+                placeholder="Search Product..."
                 aria-label="Search"
               />
-              <button className="btn btn-outline-success" type="submit">
+              <button className=" search-button" type="submit">
+              <i class="fa-solid fa-magnifying-glass"></i>
                 Search
               </button>
             </form>
           </div>
 
-          {/* Login/Sign Up Button */}
-          <button className="btn btn-primary ms-5 sm-3" onClick={handleLoginClick}>
-            {isLoggedIn ? "Login" : "Sign Up"} login
-          </button>
 
+
+          {/* Login/Sign Up Button */}
+          {/* <button className="btn btn ms-5 sm-3" style={ {backgroundColor: "#BD0E20;", color: "black"}} onClick={handleLoginClick}>
+            {isLoggedIn ? "Login" : "Sign Up"} login
+          </button> */}
+
+          <a href="/signup" className="signup-btn" >SignUp</a>
+          <a href="/login" className="login-btn">Login</a>
+
+
+          {/* <div>
+        {isLoggedIn ? (
+          <button className="signup-btn" onClick={handleLogoutClick}>Logout</button>
+        ) : (
+          <button className="login-btn" onClick={handleLoginClick}>Login SignUp</button>
+        )}
+        </div> */}
 
         </div>
       </div>

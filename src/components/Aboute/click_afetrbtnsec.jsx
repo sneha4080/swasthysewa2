@@ -1,7 +1,7 @@
 import React from "react";
-import "./click_afterbtnSec.css"; // Make sure this path is correct
+import "./btnSection.css"; // Ensure this path is correct
 
-const Store = ({ name, description, image, link }) => {
+const Content = ({ name, description, image, link }) => {
   return (
     <div className="col-md-4 card-style">
       <div className="card">
@@ -20,4 +20,4 @@ const Store = ({ name, description, image, link }) => {
   );
 };
 
-export default Store;
+export default Content;

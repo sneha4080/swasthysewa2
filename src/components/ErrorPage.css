@@ -1,0 +1,25 @@
+.container {
+    padding: 9rem 0;
+    text-align: center;
+    
+}
+
+.container h2 {
+      font-size: 10rem;
+    }
+
+.container h3 {
+      font-size: 4.2rem;
+    }
+
+.container  p {
+      margin: 2rem 0;
+    }
+
+.Error-btn{
+           background-color:#6674CC;
+           color:aliceblue;
+           height: 50px;
+           
+       }
+  

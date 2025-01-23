@@ -7,3 +7,35 @@
   z-index: 1000; /* Keeps it above other content */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow for better visibility */
 }
+
+.form-control{
+  border-radius: 2rem !important;
+  width: 16rem;
+  margin-left: 2rem !important;
+  align-items: center;
+  justify-content: center;
+  
+}
+.search-button{
+    /* background-color: black; */
+    height: 3rem;
+    width: 6rem;
+    border-radius: 10px;
+   
+}
+
+/* signup login btn */
+.signup-btn{
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+  margin: 1rem;
+}
+.login-btn{
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  color: black;
+  /* margin: 2rem; */
+}

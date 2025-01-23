@@ -1,5 +1,11 @@
 import React, { useEffect } from "react";
 import "./About.css";
+// import Content from './click_afetrbtnsec'; // Adjust the path if needed
+import Manufact from "../Homepage/manufact";
+
+
+
+
 
 const About = () => {
   useEffect(() => {
@@ -30,6 +36,7 @@ const About = () => {
   }, []);
 
   return (
+   
     <div className="about-page">
       {/* Moving Text Section */}
       <div className="moving-text-container">
@@ -42,6 +49,7 @@ const About = () => {
           <span>NUTRACEUTICALS</span>
         </div>
       </div>
+      
 
       {/* Info Section */}
       <div className="info-container">
@@ -161,15 +169,54 @@ const About = () => {
         </div>
         <h5>Cosmetics</h5>
         <p>Our GMP certified manufacturing advances our commitment to excellence, and guarantees safe, effective, and high-quality production of nutraceuticals.</p>
-
+      
     </div>
+   
 </div>
 
+ 
 <div class="about-btn">
-                <button className="btn-read more" href="#">Click here to read more</button>
+                <a className="btn-read more" href="#">Click here to read more</a>
             </div>
+          
+          <div className="holistic-img-main">
+            <div className="img-sec">
+          <img
+            src="https://lokswasthya.com/wp-content/uploads/2024/03/image-1-2.png"
+            alt="Ayurveda Products"
+          />
+        </div>
+            <div class="foot-info">
+            <div class="head-para">
+            <h2>Holistic Health Centres</h2>
+            <p>Lok Swasthya has two holistic health centres in Ahmedabad, where <br/>
+                traditional Ayurvedic healing is offered.</p>
+                </div>
+                </div>
+           
 
+        <div class="medical-img">
+        <img  src="https://lokswasthya.com/wp-content/uploads/2024/03/image-2-3.png" />
+        <div class="medical-info">
+            <h2>24x7 Low-Cost Drug Stores</h2>
+             <p>Our two low-cost pharmacies in Ahmedabad were set up in x year to <br />
+             make low-cost medicines accessible to informal women-workers, as <br />
+              their hard-earned income was being spent on medicines. Over the <br />
+              years the pharmacies have supported x number of women in the <br />
+              informal economy.</p>
+        </div>
+{/*     
+    <a href="About.html">
+        <button class="btn-medi">
+        <span class="play-icon"></span>
+         Invest in medical store
+    </button>
+    </a> */}
+    </div>
+           </div>
 
+          {/* Manufacturing Section */}
+      <Manufact />
     </div>
   );
 };
