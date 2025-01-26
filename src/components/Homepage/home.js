@@ -28,14 +28,11 @@ import ProductList from "../Product/ProductList";
 
 
 
-
-const Home = (cart, setCart, items) => {
-
+const Home = ({ cart, setCart, items }) => {
+  // Ensure cart is an array before using it
   if (!Array.isArray(cart)) {
-    cart = []; // Ensure cart is an array before using it
+    cart = []; // Initialize cart as an empty array if it's not an array
   }
-  const {myName} = useContext (AppContext)
-
 
   return (
     <div className="homepage">
@@ -48,25 +45,8 @@ const Home = (cart, setCart, items) => {
         />
       </Link>
 
-      {/* Store Cards */}
-      {/* <h1 className="card-heading">Our Ayurveda Medicine Stores</h1>
-      <div className="container">
-        <div className="row">
-          {stores.map((store, index) => (
-            <Store
-              key={index}
-              name={store.name}
-              description={store.description}
-              image={store.image}
-              link={store.link}
-            />
-          ))} */}
-        {/* </div> */}
-      {/* // </div> */}
-      
-      <ProductList/>
-    
-      
+      {/* Pass cart, setCart, and items to ProductList */}
+      <ProductList cart={cart} setCart={setCart} items={items} />
     </div>
   );
 };
